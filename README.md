@@ -35,8 +35,6 @@ $ ansible-playbook install.yml
 
 Dentro do diretório inicial do projeto, executar o comando abaixo, ele irá remover o pacote vsftpd  e o diretório `/etc/vsftpd`.
 
-**OBS**: AINDA ESTOU TRABALHANDO NA REMOÇÃO...AGUARDE E CONFIE..
-
 ```sh
 $ ansible-playbook uninstall.yml
 ```
