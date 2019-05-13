@@ -1,0 +1,12 @@
+---
+# Inserir no campo hosts o IP ou nome da nova VM PABX VIRTUAL
+- hosts: 192.168.50.90
+  tasks: 
+  - name: Efetuando a remoção do VSFTPD
+    command: rpm -e vsftpd
+  - name: Tchau VSFTPD...
+    yum:
+     name: vsftpd
+     state: removed
+  - name: Removendo arquivos de configuracao padrao
+    command: rm -rf /etc/vsftpd
