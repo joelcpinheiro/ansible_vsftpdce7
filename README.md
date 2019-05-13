@@ -4,7 +4,7 @@ Esta é uma maneira prática(pra não falar ágil, rs) de instalar o VSFTPD no C
 
 ## Intruções Iniciais
 
-Acessar o Servidor ARG-VLCEANSIBLE via SSH e entrar no diretório onde está o projeto(`/etc/ansible/vsftpdce7/`).
+Acessar o Servidor com Ansible instalado via SSH e entrar no diretório onde está o projeto(`/etc/ansible/vsftpdce7/`).
 
 ### Pré-requisitos
 
@@ -13,7 +13,7 @@ Acessar o Servidor ARG-VLCEANSIBLE via SSH e entrar no diretório onde está o p
 
 Permitir o acesso SSH para que o Ansible consiga efetuar a operação, enviando a chave pública do Host Ansible para Host de destino e inserir o IP ou nome do Host no playbook, os passos são:
 
-1. Executar o comando no ARG-VLCEANSIBLE `ssh-copy-id root@iphostdestino`;
+1. Executar o comando no Servidor do Ansible `ssh-copy-id root@iphostdestino`;
 2. Editar o playbook `install.yml` e no campo hosts inserir o IP ou nome do host de destino;
 3. Não esqueça de inserir o IP e o nome do host de destino dentro do arquivo hosts do Ansible, em `/etc/ansible/hosts` para fazer com que o playbook funcione com sucesso.
 4. Editar o arquivo presente dentro deste projeto chamado chroot_list e inserir o nome do usuário que será criado posteriormente.
@@ -52,4 +52,4 @@ $ ansible-playbook uninstall.yml
 
 ## License
 
-Use na MOB e onde achar que irá contribuir :)
+Use onde achar que irá contribuir :)
